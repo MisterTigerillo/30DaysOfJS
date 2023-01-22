@@ -12,4 +12,8 @@ console.log(
   }`
 );
 // 1.5
-const mixedDataTypes = [];
+const mixedDataTypes = [5.5, {}, null, undefined, 'Good will', [], 66];
+console.log(mixedDataTypes.length);
+
+// 1.6
+const itCompanies  = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
