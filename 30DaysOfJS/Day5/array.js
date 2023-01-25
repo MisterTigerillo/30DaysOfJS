@@ -2,51 +2,54 @@
 const emptyBox = [];
 // 1.2
 const fullBox = [12, 24, "good", 400, "fridge", "007", "nice"];
-console.log(fullBox);
+console.log("1.2", fullBox);
 // 1.3
-console.log(fullBox.length);
+console.log("1.3", fullBox.length);
 // 1.4
 console.log(
+  "1.4",
   `The first element is: ${fullBox[0]}, the middle is: ${
     fullBox[Math.floor(fullBox.length / 2)]
   }`
 );
 // 1.5
 const mixedDataTypes = [5.5, {}, null, undefined, "Good will", []];
-console.log(mixedDataTypes.length);
+console.log("1.5", mixedDataTypes.length);
 
 // 1.6
 const itCompanies = [
   "Facebook",
   "Google",
-  "KFC",
   "Microsoft",
   "Apple",
   "IBM",
   "Oracle",
+  "Amazon",
 ];
 
 // 1.7
-console.log(itCompanies);
+console.log("1.7", itCompanies);
 
 // 1.8
-console.log(itCompanies.length);
+console.log("1.8", itCompanies.length);
 
 // 1.9
 console.log(
+  "1.9",
   itCompanies[0],
   itCompanies[3],
   itCompanies[itCompanies.length - 1]
 );
 
 // 1.10
-console.log(itCompanies.join(", "));
+console.log("1.10", itCompanies.join(", "));
 
 // 1.11
-console.log(itCompanies.toString().toUpperCase());
+console.log("1.11", itCompanies.toString().toUpperCase());
 // 1.12
 const cutCompanies = itCompanies.slice(0, 5);
 console.log(
+  "1.12",
   `${cutCompanies} and ${
     itCompanies[itCompanies.length - 1]
   } are big IT companies.`
@@ -54,9 +57,9 @@ console.log(
 
 // 1.13
 if (itCompanies.includes("IBM")) {
-  console.log("This array has your company");
+  console.log("1.13", "This array has your company");
 } else {
-  console.log("Your company is not in the array");
+  console.log("1.13", "Not found");
 }
 // 1.14
 // console.log(itCompanies.includes('o').itCompanies.sort());
@@ -69,15 +72,16 @@ if (itCompanies.includes("IBM")) {
 //   return 0;
 // }));
 // 1.15
-console.log(itCompanies.sort());
+
+console.log("1.15", itCompanies.sort());
 // 1.16
-console.log(itCompanies.reverse());
+console.log("1.16", itCompanies.reverse());
 // 1.17
-console.log(itCompanies.slice(0, 3));
+console.log("1.17", itCompanies.slice(0, 3));
 // 1.18
 const start = itCompanies.length - 3;
 const end = itCompanies.length;
-console.log(itCompanies.slice(start, end));
+console.log("1.18", itCompanies.slice(start, end));
 // 1.19
 const Companies = [
   "Facebook",
@@ -92,17 +96,16 @@ const Companies = [
 ];
 if (Companies.length % 2 === 0) {
   const middler = Companies.length / 2;
-  console.log(middler);
   const premiddler = middler - 1;
-  console.log(Companies[premiddler], Companies[middler]);
+  console.log("1.19", Companies[premiddler], Companies[middler]);
 } else {
   const oddMiddler = Math.floor(Companies.length / 2);
-  console.log(Companies[oddMiddler]);
+  console.log("1.19", Companies[oddMiddler]);
 }
 // 1.20
 console.log(itCompanies);
 itCompanies.shift();
-console.log("Before", itCompanies);
+console.log("1.20", itCompanies);
 
 // 1.21
 // console.log(itCompanies.length % 2 === 0);
@@ -112,10 +115,19 @@ itCompanies.length % 2 === 0
       "Odd",
       itCompanies.splice(console.log(Math.floor(itCompanies.length / 2)), 1)
     );
-console.log("After", itCompanies);
+console.log("1.21", itCompanies);
 // 1.22
 itCompanies.pop();
-console.log(itCompanies);
+console.log("1.22", itCompanies);
 // 1.23
 itCompanies.splice(0);
-console.log(itCompanies);
+console.log("1.23", itCompanies);
+
+// 2.1
+
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+
+const words = text.split(" ");
+console.log(words);
+console.log(words.length);
