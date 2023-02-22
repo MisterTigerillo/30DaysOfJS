@@ -1,4 +1,4 @@
-const webTechs = [
+export const webTechs = [
   "HTML",
   "CSS",
   "JS",
@@ -8,5 +8,3 @@ const webTechs = [
   "Express",
   "MongoDB",
 ];
-
-export default webTechs;

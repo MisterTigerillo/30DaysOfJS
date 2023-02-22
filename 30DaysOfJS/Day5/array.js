@@ -1,3 +1,7 @@
+// "use strict";
+import { countries } from "./countries.js";
+import { webTechs } from "./web_techs.js";
+
 // 1.1
 const emptyBox = [];
 // 1.2
@@ -123,11 +127,54 @@ console.log("1.22", itCompanies);
 itCompanies.splice(0);
 console.log("1.23", itCompanies);
 
-// 2.1
-
+// 2.2
 let text =
   "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
 
 const words = text.split(" ");
 console.log(words);
-console.log(words.length);
+// console.log(words.length);
+
+// 2.3
+// const shoppingCart = ["Milk", "Coffee", "Tea", "Honey", "Ginger"];
+// if (shoppingCart.indexOf("Meat") == -1) {
+//   shoppingCart.unshift("Meat");
+// }
+// if (shoppingCart.indexOf("Sugar") == -1) {
+//   shoppingCart.push("Sugar");
+// }
+// let isAllergic = confirm("Are you allergic or not?");
+// if (isAllergic) {
+//   let indexOfHoney = shoppingCart.indexOf("Honey");
+//   console.log(indexOfHoney);
+//   shoppingCart.splice(indexOfHoney, 1);
+// }
+
+// let indexOfTea = shoppingCart.indexOf("Tea");
+// shoppingCart[indexOfTea] = "Green Tea";
+
+// console.log(shoppingCart);
+
+// console.log(countries);
+function getMaxSubSum(array) {
+  let finalSum = 0;
+  let sum = 0;
+  for (let item of array) {
+    finalSum += item;
+    console.log(finalSum);
+    if (item < 0) {
+      finalSum = 0;
+    }
+    // finalSum = Math.max(finalSum, sum);
+  }
+  return finalSum;
+}
+
+console.log(
+  getMaxSubSum([-1, 2, 3, -9])
+  // getMaxSubSum([2, -1, 2, 3, -9]),
+  // getMaxSubSum([-1, 2, 3, -9, 11]),
+  // getMaxSubSum([-2, -1, 1, 2]),
+  // getMaxSubSum([100, -9, 2, -3, 5]),
+  // getMaxSubSum([1, 2, 3])
+);

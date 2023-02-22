@@ -1,4 +1,4 @@
-const countries = [
+export const countries = [
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -192,4 +192,4 @@ const countries = [
   "Zimbabwe",
 ];
 
-export default countries;
+// console.log(countries);
