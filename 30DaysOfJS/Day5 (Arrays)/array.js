@@ -132,10 +132,10 @@ let text =
   "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
 
 const words = text.split(" ");
-console.log(words);
+console.log("2.2", words);
 // console.log(words.length);
 
-// 2.3
+//2.3;
 // const shoppingCart = ["Milk", "Coffee", "Tea", "Honey", "Ginger"];
 // if (shoppingCart.indexOf("Meat") == -1) {
 //   shoppingCart.unshift("Meat");
@@ -156,25 +156,76 @@ console.log(words);
 // console.log(shoppingCart);
 
 // console.log(countries);
-function getMaxSubSum(array) {
-  let finalSum = 0;
-  let sum = 0;
-  for (let item of array) {
-    finalSum += item;
-    console.log(finalSum);
-    if (item < 0) {
-      finalSum = 0;
-    }
-    // finalSum = Math.max(finalSum, sum);
-  }
-  return finalSum;
+
+// 2.4
+let country = "Epiopia";
+if (countries.includes(country)) {
+  console.log(country.toUpperCase());
+} else {
+  countries.push(country);
+  console.log("2.4", countries.sort());
 }
 
-console.log(
-  getMaxSubSum([-1, 2, 3, -9])
-  // getMaxSubSum([2, -1, 2, 3, -9]),
-  // getMaxSubSum([-1, 2, 3, -9, 11]),
-  // getMaxSubSum([-2, -1, 1, 2]),
-  // getMaxSubSum([100, -9, 2, -3, 5]),
-  // getMaxSubSum([1, 2, 3])
+// 2.5
+let isExist = webTechs.includes("Sass");
+if (!isExist) {
+  webTechs.push("Sass");
+}
+console.log("2.5", webTechs);
+
+// 2.6
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+
+let fullStack = [];
+fullStack = [...frontEnd, ...backEnd];
+
+console.log("2.6", fullStack);
+
+// 3.1.1
+const ages = [19, 22, 19, 24, 20, 25, 35, 24, 25, 24];
+const sorted = [...ages].sort((a, b) => a - b);
+console.log("3.1.1", "sorted", sorted);
+
+const max = ages.reduce((max, item) => {
+  max = item > max ? item : max;
+  return max;
+});
+const min = ages.reduce((min, item) => {
+  min = item < min ? item : min;
+  return min;
+});
+console.log("3.1.1", "max, min", max, min);
+
+// 3.1.2
+function twoBack(sorted) {
+  let arr = [];
+  arr.push(sorted[sorted.length / 2 - 1], sorted[sorted.length / 2]);
+  return arr;
+}
+
+let medianAge =
+  sorted.length % 2 == 0
+    ? twoBack(sorted)
+    : sorted[Math.floor(sorted.length / 2)];
+
+console.log("3.1.2", "median -", medianAge);
+
+// 3.1.3
+let averageAge = Math.round(
+  ages.reduce((acc, item) => {
+    return acc + item;
+  }) / ages.length
 );
+
+console.log("3.1.3", "average -", averageAge);
+
+// 3.1.4
+
+let rangedArray = [];
+
+for (let i = min; i <= max; i++) {
+  rangedArray.push(i);
+}
+console.log("rangedArray", rangedArray);
+
